@@ -22,7 +22,8 @@ function processWeatherData (weatherData) {
 
 const currentWeather = weatherData.current;
 const processedData = {
-    temperature: currentWeather.temp_c,
+    celsius: currentWeather.temp_c,
+    fahrenheit: currentWeather.temp_f,
     description: currentWeather.condition.text,
   };
 
@@ -54,7 +55,8 @@ async function fetchWeatherAndProcess(location) {
     if (weatherInfo) {
         weatherInfoDiv.innerHTML = `
       <h3>Weather Information</h3>
-      <p>Temperature: ${weatherInfo.temperature}°C</p>
+      <p>Temperature (Celsius): ${weatherInfo.celsius}°C</p>
+      <p>Temperature (Fahrenheit): ${weatherInfo.fahrenheit}°F</p>
       <p>Description: ${weatherInfo.description}</p>
     `;
     } else {
