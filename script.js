@@ -1,4 +1,4 @@
-async function getWeather (location) {
+async function getWeather(location) {
     try {
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=8312fb0126e14f47ab825213242304&q=${location}`)
     const weather = await response.json();
@@ -11,7 +11,7 @@ async function getWeather (location) {
 }
 getWeather();
 
-function processWeatherData (weatherData) {
+function processWeatherData(weatherData) {
  // Check if jsonData is valid
  // eslint-disable-next-line no-prototype-builtins
  if (!weatherData || !weatherData.hasOwnProperty('current')) {
