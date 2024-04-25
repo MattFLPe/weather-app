@@ -19,7 +19,6 @@ function processWeatherData (weatherData) {
     return null;
   };
 
-
 const currentWeather = weatherData.current;
 const processedData = {
     celsius: currentWeather.temp_c,
@@ -29,7 +28,6 @@ const processedData = {
 
   return processedData;
 }
-
 
 async function fetchWeatherAndProcess(location) {
     const weatherData = await getWeather(location);
